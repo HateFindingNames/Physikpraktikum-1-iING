@@ -34,7 +34,7 @@ Git is **the** got-to tool for source control and management. From the [official
 If Chocolatey was installed previously, installing Git is done by running the following command:
 
 ```
-choco install git /NoAutoCrlf /NoShellIntegration /DefaultBranchName:main -y
+choco install git --params="'/NoAutoCrlf /NoShellIntegration /DefaultBranchName:main'" -y
 ```
 
 ### Install Without Chocolatey
@@ -44,6 +44,25 @@ Go to Git's [download](https://git-scm.com/download/win) page for Windows and do
 <img src="assets\git_setup_options.png" alt="image" width="50%" height="auto">
 
 ## Miniconda
+
+### Install With Chocolatey
+
+```
+choco install miniconda3 --params="'/InstallationType:JustMe' '/RegisterPython:1' '/AddToPath:0'" -y
+```
+
+Heads up :point_up:: use below command instead if you already have a working Python install to not have miniconda overwrite your primary Python interpreter. 
+
+```
+choco install miniconda3 --params="'/InstallationType:JustMe' '/RegisterPython:0' '/AddToPath:0'" -y
+```
+
+### Install Without Chocolatey
+
+Visit [minicondas](https://docs.anaconda.com/free/miniconda/index.html) download page and download the latest Windows installer. Run the installer and keep all default settings.
+
+Heads up :point_up:: disable *"Register Miniconda3 as my default Python 3.12"* if you already have a working Python install to not have miniconda overwrite your primary Python interpreter.
+<img src="assets\miniconda_setup_options.png" alt="image" width="50%" height="auto">
 
 ## VSCode
 
