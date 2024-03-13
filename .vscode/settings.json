@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "python.defaultInterpreterPath": "~/.conda/envs/physikpraktikum1/python.exe"
+}
